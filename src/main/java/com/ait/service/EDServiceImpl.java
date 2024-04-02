@@ -41,8 +41,7 @@ public class EDServiceImpl implements EDService {
 		
 		   plan.getPlanName().equalsIgnoreCase("Medicare") && checkSeniorAge()                                ||
 		
-	       plan.getPlanName().equalsIgnoreCase("RIW") && summary.getEducation().getHighestDegree() != null 
-			    && !summary.getEducation().getHighestDegree().equals("NA")) {
+	       plan.getPlanName().equalsIgnoreCase("RIW") && summary.getEducation().getHighestDegree() != null ) {
 			status = true;
 		}
 		
