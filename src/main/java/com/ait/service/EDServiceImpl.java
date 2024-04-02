@@ -34,7 +34,7 @@ public class EDServiceImpl implements EDService {
 		if(plan.getPlanName().equalsIgnoreCase("SNAP") && summary.getIncome().getSalaryIncome() <= 20000.0    ||
 		
 		   plan.getPlanName().equalsIgnoreCase("CCAP")  && summary.getIncome().getSalaryIncome() <= 20000.0 && 
-		   summary.getKidsDto().getKids().size() > 0 && checkKidsAge(summary.getKidsDto().getKids())                                          ||
+		   !summary.getKidsDto().getKids().isEmpty() && checkKidsAge(summary.getKidsDto().getKids())                                          ||
 		
            plan.getPlanName().equalsIgnoreCase("Medicaid") && summary.getIncome().getSalaryIncome() <= 20000.0
 				&& summary.getIncome().getPropertyIncome() == 0                                               ||
